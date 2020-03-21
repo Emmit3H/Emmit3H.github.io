@@ -462,15 +462,20 @@
     <form>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
-    <input type="button" onclick="sendMail();" value="Submit to send email">
+    <form>
+        <input type="button" onclick="sendMail();" value="Submit to send email">
+    </form>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 
     <script>
         function sendMail() {
             Email.send({
                 Host: "smtp.elasticemail.com",
-                To: 'jcg22@students.ptcollege.edu',
-                From: "cottrell.lee@ptcollege.edu",
+                Username: "eh20@students.ptcollege.edu",
+                Password: "DF42E29207E7337C78BCD9931D7B46DF49DD",
+                To: 'eh20@students.ptcollege.edu',
+                From: "eh20@students.ptcollege.edu",
                 Subject: "Student Activities Form",
                 Body: "You have successfully submitted the form."
             }).then(
@@ -480,6 +485,7 @@
         }
 
     </script>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
